@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:monospace;
+}
+
+body{
+    background: url(../img/inicio.gif);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+h1{
+    animation: mover-arriba-abajo 2.5s;
+    color: #eeffd1;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+@keyframes mover-arriba-abajo{
+    from{
+        transform: translateY(-1000px);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+a {
+    background-color: #eeffd1;
+    color: #727e65;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: monospace;
+    animation: mover-arriba-abajo 2.5s;
+    text-decoration: none;
+}
+
+a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}

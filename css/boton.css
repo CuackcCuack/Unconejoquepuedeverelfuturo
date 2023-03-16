@@ -1,0 +1,119 @@
+@keyframes extend {
+    0% {
+        
+        width: 10rem;
+        height: 5rem;
+        border-radius: 100px;
+        } 10% {
+        width: 10rem;
+        height: 5rem;
+        background: #000000;
+        margin-left: - 5px;
+        margin-top: - 5px;
+        } 20% {
+        width: 10rem;
+        height: 5rem;
+        background: #e04f4a;
+        margin-left: 0px;
+        margin-top: 0px;
+        } 100% {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 100px;
+        margin-left: 190px;
+        background: #e04f4a;
+        }
+    }
+@-webkit-keyframes disappear {
+    0% {
+        opacity: 1;
+        } 20% {
+        color: #000000;
+        } 100% {
+        opacity: 0;
+        }
+    }
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        } 20% {
+        color: #000000;
+        } 100% {
+        opacity: 0;
+        }
+    }
+@-webkit-keyframes appear {
+    0% {
+        opacity: 0;
+        } 70% {
+        opacity: 0;
+        } 100% {
+        opacity: 1;
+        }
+    }
+@keyframes appear {
+    0% {
+        opacity: 0;
+        } 70% {
+        opacity: 0;
+        } 100% {
+        opacity: 1;
+        }
+    }
+
+button {
+    width: 10rem;
+    height: 5rem;
+    /*border-radius*/
+    border-radius: 100px;
+    background: #000000;
+    position: relative;
+    border: 5px solid #e04f4a
+    }
+
+button > span {
+    font-size: 48px;
+    color: #e04f4a
+    }
+
+.luck {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0
+    }
+
+button:focus {
+    /*animation*/
+    -webkit-animation: extend 1s ease-in-out;
+    -ms-animation: extend 1s ease-in-out;
+    animation: extend 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
+
+button:focus > span {
+    /*animation*/
+    -webkit-animation: disappear 1s ease-in-out;
+    -ms-animation: disappear 1s ease-in-out;
+    animation: disappear 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
+
+button:focus > .luck {
+    /*animation*/
+    -webkit-animation: appear 1s ease-in-out;
+    -ms-animation: appear 1s ease-in-out;
+    animation: appear 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
