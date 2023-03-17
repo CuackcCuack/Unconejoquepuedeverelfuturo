@@ -66,7 +66,6 @@ function startGame() {
         drawPredators(predators);
     }, 2000);
 
-    // Event listeners
     canvas.addEventListener("mousedown", function(event) {
         let x = event.clientX - canvas.offsetLeft;
         let y = event.clientY - canvas.offsetTop;
